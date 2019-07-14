@@ -5,10 +5,18 @@ public class Response<T> {
     private Status status;
     private T data;
 
+    public enum Status {
+        OK, EXCEPTION
+    }
+
     public Response(int code, Status status, T data) {
         this.code = code;
         this.status = status;
         this.data = data;
+    }
+
+    public static <T> Response<T> success(T data) {
+        return new Response<>(200, Status.OK, data);
     }
 
     public int getCode() {
@@ -33,9 +41,5 @@ public class Response<T> {
 
     public void setData(T data) {
         this.data = data;
-    }
-
-    public enum Status {
-        OK, EXCEPTION
     }
 }
