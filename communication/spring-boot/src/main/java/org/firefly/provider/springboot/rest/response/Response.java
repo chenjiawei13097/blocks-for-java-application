@@ -1,22 +1,19 @@
 package org.firefly.provider.springboot.rest.response;
 
+// 统一异常处理：https://segmentfault.com/a/1190000017908482?utm_source=tag-newest
 public class Response<T> {
     private int code;
-    private Status status;
+    private String message;
     private T data;
 
-    public enum Status {
-        OK, EXCEPTION
-    }
-
-    public Response(int code, Status status, T data) {
+    public Response(int code, String message, T data) {
         this.code = code;
-        this.status = status;
+        this.message = message;
         this.data = data;
     }
 
     public static <T> Response<T> success(T data) {
-        return new Response<>(200, Status.OK, data);
+        return new Response<>(200, "success", data);
     }
 
     public int getCode() {
@@ -27,12 +24,12 @@ public class Response<T> {
         this.code = code;
     }
 
-    public Status getStatus() {
-        return status;
+    public String getMessage() {
+        return message;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public T getData() {

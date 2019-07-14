@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class WebExceptionHandler {
     @ExceptionHandler
     public Response<String> parameterException(ParameterBillException e) {
-        return new Response<>(400, Response.Status.EXCEPTION, e.getMessage());
+        return new Response<>(400, e.getMessage(), null);
     }
 
     @ExceptionHandler
     public Response<String> unknownException(UnknownBillException e) {
-        return new Response<>(505, Response.Status.EXCEPTION, e.getMessage());
+        return new Response<>(505, e.getMessage(), null);
     }
 
     @ExceptionHandler
     public Response<String> generalException(Exception e) {
-        return new Response<>(501, Response.Status.EXCEPTION, e.getMessage());
+        return new Response<>(501, e.getMessage(), null);
     }
 }
