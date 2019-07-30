@@ -19,9 +19,9 @@
 
     <modules>
         <module>communication</module>
+        <module>db</module>
+        <module>encoding</module>
         <module>security</module>
         <module>tool</module>
-        <module>encoding</module>
-        <module>db</module>
     </modules>
 </project>

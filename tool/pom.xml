@@ -25,6 +25,6 @@
         <module>findbugs</module>
         <module>junit</module>
         <module>maven</module>
-        <module>crossdomain</module>
+        <module>cross-domain</module>
     </modules>
 </project>

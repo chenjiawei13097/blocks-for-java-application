@@ -18,8 +18,8 @@
     </properties>
 
     <modules>
-        <module>spring-boot</module>
-        <module>rabbitmq</module>
         <module>feign-client</module>
+        <module>rabbit-mq</module>
+        <module>spring-boot</module>
     </modules>
 </project>

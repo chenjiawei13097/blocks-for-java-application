@@ -18,8 +18,8 @@
     </properties>
 
     <modules>
-        <module>leveldb</module>
+        <module>level-db</module>
         <module>mysql</module>
-        <module>rocksdb</module>
+        <module>rocks-db</module>
     </modules>
 </project>
