@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.firefly.provider</groupId>
-    <artifactId>security</artifactId>
+    <artifactId>encoding</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -18,6 +18,6 @@
     </properties>
 
     <modules>
-        <module>cryptography</module>
+        <module>snappy</module>
     </modules>
 </project>

@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.firefly.provider</groupId>
-    <artifactId>security</artifactId>
+    <artifactId>rabbitmq</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,7 +16,11 @@
         <maven.compiler.target>12</maven.compiler.target>
     </properties>
 
-    <modules>
-        <module>cryptography</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.7.1</version>
+        </dependency>
+    </dependencies>
 </project>
